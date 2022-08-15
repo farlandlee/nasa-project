@@ -11,10 +11,18 @@
     "client": "npm start --prefix client",
     "watch": "npm run server & npm run client",
     "deploy": "npm run build --prefix client && npm start --prefix server",
-    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
-    "test": "npm test --prefix server && npm test --prefix client"
+    "test": "npm run test --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odziem/nasa-project.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odziem/nasa-project/issues"
+  },
+  "homepage": "https://github.com/odziem/nasa-project#readme"
 }

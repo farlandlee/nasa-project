@@ -28,6 +28,7 @@ const Launch = props => {
       <input type="text" id="rocket-name" name="rocket-name" defaultValue="Explorer IS1" />
       <label htmlFor="planets-selector">Destination Exoplanet</label>
       <select id="planets-selector" name="planets-selector">
+        <option value="" >Select Planet...</option>
         {selectorBody}
       </select>
       <Clickable>
