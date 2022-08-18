@@ -8,12 +8,15 @@ jobs:
   build:
     env:
       CI: true #this is a built in function that tells it to not run tests in watch mode
+    strategy:
+      matrix:
+        node-version: [18.x,16.x,14.x]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js version 16
+      - name: Use Node.js version ${{ matrix.node-version}}
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: ${{ matrix.node-version}}
       - run: npm install
       - run: npm run build --prefix client
