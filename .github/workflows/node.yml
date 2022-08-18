@@ -6,6 +6,8 @@ on:
     branches: [ master ]
 jobs:
   build:
+    env:
+      CI: true #this is a built in function that tells it to not run tests in watch mode
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
